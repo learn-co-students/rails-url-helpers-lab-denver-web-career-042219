@@ -1,0 +1,12 @@
+<h1>hello</h1>
+
+<p>Current status for <%=@student.first_name%>
+<%= @student.active %></p>
+
+<b>
+
+<p>Check this box to activate student </p>
+<form action="/students/<%= @student.id %>/edit" method="post">
+  <input type="checkbox" name="active" value="false">
+  <input type="submit" name="submit" value="submit">
+</form>
